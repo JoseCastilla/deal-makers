@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/deal-makers/cdmx",        "destination": "/deal-makers/cdmx/",        "permanent": true },
+    { "source": "/deal-makers/guadalajara", "destination": "/deal-makers/guadalajara/", "permanent": true },
+    { "source": "/deal-makers/monterrey",   "destination": "/deal-makers/monterrey/",   "permanent": true },
+    { "source": "/deal-makers/gracias",     "destination": "/deal-makers/gracias/",     "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/deal-makers/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options",       "value": "nosniff" },
+        { "key": "X-Frame-Options",              "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy",              "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy",           "value": "geolocation=(), microphone=(), camera=()" },
+        { "key": "Strict-Transport-Security",    "value": "max-age=31536000; includeSubDomains" }
+      ]
+    },
+    {
+      "source": "/deal-makers/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

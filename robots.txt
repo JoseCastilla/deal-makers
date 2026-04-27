@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /deal-makers/
+Disallow: /deal-makers/gracias/
+
+Sitemap: https://tudominio.com/deal-makers/sitemap.xml

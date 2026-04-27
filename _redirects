@@ -1,0 +1,6 @@
+# Netlify _redirects fallback (también funciona en Cloudflare Pages)
+# Trailing slash canónico
+/deal-makers/cdmx          /deal-makers/cdmx/          301
+/deal-makers/guadalajara   /deal-makers/guadalajara/   301
+/deal-makers/monterrey     /deal-makers/monterrey/     301
+/deal-makers/gracias       /deal-makers/gracias/       301

@@ -1,0 +1,52 @@
+# =============================================================
+# Netlify config — Deal Makers Inmobiliarios
+# =============================================================
+# Asume que el contenido de la carpeta `deal-makers/` se sube
+# tal cual al deploy. Si tu sitio principal vive en el mismo
+# repo, mové este archivo al root y ajustá `publish` para
+# apuntar a la carpeta que contiene `deal-makers/`.
+
+[build]
+  publish = "."
+  functions = "assets/functions"
+
+# Trailing slash uniforme — Meta y SEO trabajan mejor así
+[[redirects]]
+  from = "/deal-makers/cdmx"
+  to   = "/deal-makers/cdmx/"
+  status = 301
+
+[[redirects]]
+  from = "/deal-makers/guadalajara"
+  to   = "/deal-makers/guadalajara/"
+  status = 301
+
+[[redirects]]
+  from = "/deal-makers/monterrey"
+  to   = "/deal-makers/monterrey/"
+  status = 301
+
+[[redirects]]
+  from = "/deal-makers/gracias"
+  to   = "/deal-makers/gracias/"
+  status = 301
+
+# Headers de seguridad + caching
+[[headers]]
+  for = "/deal-makers/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/deal-makers/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/deal-makers/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=600, must-revalidate"
