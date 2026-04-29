@@ -1,8 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("leadForm");
     
+    // 1. Manejo de la selección visual y actualización del input hidden
+    const cards = document.querySelectorAll('.ccard');
+    const ciudadInput = document.getElementById('ciudad');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Remover clase 'sel' de todas las tarjetas
+            cards.forEach(c => c.classList.remove('sel'));
+            
+            // Añadir clase 'sel' a la tarjeta clickeada
+            this.classList.add('sel');
+            
+            // Actualizar el input hidden con el valor del data-city
+            const seleccionada = this.getAttribute('data-city');
+            ciudadInput.value = seleccionada;
+            
+            console.log("Ciudad seleccionada:", seleccionada); // Debug
+        });
+    });
+
     // PEGA AQUÍ LA URL DE TU WEBHOOK
-    const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/TU_WEBHOOK_ID"; 
+    const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/BGswUQdyvP0DFEjEBLOe/webhook-trigger/b99499fe-52ee-4fdc-bf13-447fa852006a"; 
 
     if(form) {
         form.addEventListener("submit", async (e) => {
@@ -13,7 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.innerText = "PROCESANDO...";
             btn.disabled = true;
 
+            const ciudad = document.getElementById("ciudad").value;
             const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
             const correo = document.getElementById("correo").value;
             const countryCode = document.getElementById("countryCode").value;
             const telefono = document.getElementById("telefono").value;
@@ -24,12 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const payload = {
                 firstName: nombre,
+                lastName: apellido,
                 email: correo,
                 phone: fullPhone,
                 customData: {
+                    ciudad_evento: ciudad,
                     experiencia: experiencia,
                     origen: "Landing Page Deal Makers",
-                    pais: countryCode
                 }
             };
 
