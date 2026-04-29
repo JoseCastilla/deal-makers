@@ -125,7 +125,6 @@
   .proof-num{font-family:'Bebas Neue',sans-serif;font-size:var(--fd-2);color:var(--gold);line-height:1}
   .proof-label{font-size:var(--fs-xs);color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:1px; margin-top:6px; font-weight: 600;}
   
-  
   /* OBJETIVO + PILARES */
   .objetivo-sec{padding:100px 80px;background:linear-gradient(110deg,#0C0800,#0A0600);border-bottom:1px solid rgba(201,168,76,.1);}
   @media (max-width: 768px) { .objetivo-sec { padding: 60px 20px; } }
