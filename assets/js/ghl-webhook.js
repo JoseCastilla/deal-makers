@@ -68,8 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     fbq('track', 'Lead'); 
                 }
 
-                // Redirige a la página de gracias, inyectando el nombre en la URL
-                window.location.href = `/gracias/index.html?name=${encodeURIComponent(nombre)}`;
+                // Redirige a la página de la ciudad seleccionada, , inyectando el nombre en la URL
+                const carpetaCiudad = ciudad.toLowerCase();
+                window.location.href = `/${carpetaCiudad}/index.html?name=${encodeURIComponent(nombre)}`;
 
             } catch (error) {
                 console.error("Error:", error);
