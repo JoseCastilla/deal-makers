@@ -6,10 +6,10 @@
    ============================================================ */
 window.DM_CONFIG = {
   /* Sustituí por el Pixel ID real cuando esté listo */
-  PIXEL_ID: "YOUR_PIXEL_ID",
+  PIXEL_ID: "3331815516988253",
 
   /* Dominio canónico — usado en OG tags y enlaces absolutos */
-  DOMAIN: "https://tudominio.com",
+  DOMAIN: "https://tour.mundoinmobiliario.tv/",
   BASE_PATH: "/deal-makers",
 
   /* WhatsApp comercial (sin +, formato wa.me) */
