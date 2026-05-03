@@ -78,7 +78,7 @@
 
   /* ---------- pixel ---------- */
   function initPixel() {
-    if (!CFG.PIXEL_ID || CFG.PIXEL_ID === "3331815516988253") {
+    if (!CFG.PIXEL_ID || CFG.PIXEL_ID === "YOUR_PIXEL_ID") {
       log("Pixel ID no configurado, eventos no se dispararán.");
       return false;
     }
