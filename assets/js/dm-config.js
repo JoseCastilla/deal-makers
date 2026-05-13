@@ -32,7 +32,7 @@ window.DM_CONFIG = {
       slug: "cdmx",
       label: "Ciudad de México",
       shortLabel: "CDMX",
-      dates: "13-14 Junio 2026",
+      dates: "15-16 Agosto 2026",
       contentId: "dm-cdmx-2026",
       ticketValue: 4990,
       pageUrl: "/deal-makers/cdmx/"
@@ -41,7 +41,7 @@ window.DM_CONFIG = {
       slug: "guadalajara",
       label: "Guadalajara",
       shortLabel: "GDL",
-      dates: "27-28 Junio 2026",
+      dates: "29-30 Agosto 2026",
       contentId: "dm-gdl-2026",
       ticketValue: 4990,
       pageUrl: "/deal-makers/guadalajara/"
@@ -50,7 +50,7 @@ window.DM_CONFIG = {
       slug: "monterrey",
       label: "Monterrey",
       shortLabel: "MTY",
-      dates: "29-30 Agosto 2026",
+      dates: "27-28 Junio 2026",
       contentId: "dm-mty-2026",
       ticketValue: 4990,
       pageUrl: "/deal-makers/monterrey/"
