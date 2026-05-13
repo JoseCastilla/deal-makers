@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll('.ccard');
     const ciudadInput = document.getElementById('ciudad');
 
+    /*
     cards.forEach(card => {
         card.addEventListener('click', function() {
             // Remover clase 'sel' de todas las tarjetas
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Ciudad seleccionada:", seleccionada); // Debug
         });
     });
+    */
 
     // PEGA AQUÍ LA URL DE TU WEBHOOK
     const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/BGswUQdyvP0DFEjEBLOe/webhook-trigger/b99499fe-52ee-4fdc-bf13-447fa852006a"; 
@@ -33,7 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.innerText = "PROCESANDO...";
             btn.disabled = true;
 
-            const ciudad = document.getElementById("ciudad").value;
+            // const ciudad = document.getElementById("ciudad").value;
+            // Definimos Monterrey por defecto para esta fase de la landing
+            const ciudad = "Monterrey";
             const nombre = document.getElementById("nombre").value;
             const apellido = document.getElementById("apellido").value;
             const correo = document.getElementById("correo").value;
